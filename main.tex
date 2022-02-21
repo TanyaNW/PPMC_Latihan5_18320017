@@ -2,6 +2,8 @@
 \usepackage{cite}
 \usepackage{graphicx}
 \usepackage{color}
+\usepackage{algorithm2e}
+\usepackage{amsmath}
 
 
 %Judul
@@ -17,6 +19,9 @@ Email: 18320017@std.stei.itb.ac.id}
 
 %Folder Gambar
 \graphicspath{{./gambar/}}
+
+%Algoritma
+\RestyleAlgo{ruled}
 
 \begin{document}
 
@@ -41,6 +46,29 @@ Pada kasus ini, masing-masing persimpangan di Kebun Raya Purwodadi direpresentas
 
 \section{Studi Pustaka}
 \subsection{Algoritma Dijkstra}
+
+\begin{algorithm}
+\caption{Dijkstra's Algorithm}
+\KwResult{Find the shorthest path from a to z}
+{G has vertices a = vo, v1, ..., vn = z and lengths w(vi,vj) where w(vi,vj) = infinity if vi,vj is not an edge in G}
+\For{$i := 1$ \KwTo $n$}{
+	L(vi) := $\infty$}
+$L(a): = 0$\\
+$S: = \emptyset$\\
+{the label are now initialized so that the label of a is 0  and all other labels are infinity, and S is an empty set}
+\While{$z \notin S$}{
+	{u := a vertex not in S with L(u) minimal}\\
+	{S := S $\cup$ ${u}$}\\
+	\For{all vertices v not in S}{
+		\If{L(u) + x(u,v) < L(v)}{
+			{L(v) := L(u) + w(u,v)}\\
+			{this adds a vertex to S with minimal label and updates teh labels of vertices no in S}
+		}
+	}
+}
+\Return{L(z) = length of a shortest path from a to z}
+\end{algorithm}
+
 Algoritma Dijkstra adalah algoritma yang digunakan untuk menemukan jarak jalur terpendek antara dua  \textit{vertice} pada  \textit{graph} berbobot dan tidak berarah sederhana~\cite{Rosen2011}. Berbobot berarti graﬁk memiliki  \textit{edge} dengan suatu ’bobot’ atau harga. Bobot dapat merepresentasikan jarak, waktu, atau apapun yang memodelkan koneksi antara kedua  \textit{node}. Tidak berarah memiliki arti bahwa untuk setiap  \textit{node} yang terhubung, kita dapat mendekati suatu  \textit{node} dari kedua arah. Pendekatan Dijikstra juga memiliki asumsi bahwa bobot pada  \textit{edge} memiliki nilai yang tidak negatif. Hal ini karena nilai bobot akan terus dibandingkan dan diambil nilai yang paling kecil. Ada banyak varian pada algoritma ini, namun pada percobaan ini digunakan varian dimana suatu  \textit{node} ditetapkan menjadi  \textit{source node}. Dari  \textit{node} inilah akan dicari jarak terpendek diantara  \textit{node} lain. Algoritma ini dicetuskan oleh Edsger Wybe Dijkstra, salah seorang tokoh ternama di bidang  \textit{computer science}~\cite{dijkstra1959note}. Kompleksitas dari algoritma dijkstra adalah  \textit{O($n^2$)}, dengan \textit{n} menyatakan jumlah  \textit{vertice} dari  \textit{graph} yang bersangkutan.
 
 \subsection{Kebun Raya Purwodadi}
@@ -62,6 +90,24 @@ Program akan dimulai dengan pembacaan ﬁle bernama \textit{listtanaman.txt}. Fi
 
 \subsection{Implementasi Dijkstra dalam Bahasa C}
 Dalam implementasi algoritma, abstraksi dengan menggunakan pseudocode dapat dibagi menjadi dua buah fungsi dan satu program utama. Fungsi yang digunakan adalah fungsi printgraph (Fungsi Graph) untuk memunculkan graph berukuran $n \times n$ ke layar pengguna. Algoritma dari fungsi tersebut dapat dilihat pada bagian di bawah ini:
+
+\begin{algorithm}
+\caption{Fungsi Graph (printgraph)}
+\SetKwInOut{Output}{output}
+
+\KwResult{Memunculkan Graph $n \times n$ Ke Layar}
+
+\While{$i \le n - 1$}{
+	{$j \leftarrow 0;$}//
+	\While{$j \le n - 1$}{
+		\eIf{$graph[i][j] = int_{max}$}{
+			\Output{(--1)}}
+		{\Output{(graph[i][j])}}
+		{$j \leftarrow j + 1$}
+	}
+}
+
+\end{algorithm}
 
 Fungsi kedua yang digunakan adalah fungsi pencari indeks pada array yang akan diproses dengan menggunakan pendekatan algoritma Dijkstra. Abstraksi fungsi yang digunakan dapat dilihat pada bagian berikut ini:
 
