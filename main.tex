@@ -26,7 +26,7 @@ Dijkstra, \textit{Vertex}, \textit{Edge}, Tanaman.
 \end{IEEEkeywords}
 
 \section{Introduction}
-Studi mengenai penggunaan algoritma Dijkstra dalam mencari jarak terdekat dapat diimplementasikan pada kasus pencariantanamanpadaKebunRayaPurwodadisepertiyangtelah dilakukan oleh Yusuf et al di tahun 2017 . Paper ini bertujuan untuk melakukan simulasi kembali terhadap penelitian yang telah dilakukan dengan bahasa C serta mengevaluasi eﬁsiensinya melalui perhitungan kompleksitas waktu dan ruang dengan analisis Big-O.
+Studi mengenai penggunaan algoritma Dijkstra dalam mencari jarak terdekat dapat diimplementasikan pada kasus pencariantanamanpadaKebunRayaPurwodadisepertiyangtelah dilakukan oleh Yusuf et al di tahun 2017 ~\cite{yusuf2017implementasi}. Paper ini bertujuan untuk melakukan simulasi kembali terhadap penelitian yang telah dilakukan dengan bahasa C serta mengevaluasi eﬁsiensinya melalui perhitungan kompleksitas waktu dan ruang dengan analisis Big-O.
 
 Di Kecamatan Purwodadi, Kabupaten Pasuruan, terdapat salah satu kebun raya di Indonesia yang bernama Kebun Raya Purwodadi yang memiliki luas area hingga 85 hektar. Kebun raya sebagai fasilitas rekreasi dan penelitian ini ternyata kekurangan papan informasi yang seharusnya disediakan oleh pihak pengelola. Hal ini menyebabkan banyaknya pengunjung yang merasa kebingungan untuk mencari lokasi dari tanaman tertentu. Oleh karena itu, Yusuf et al (2017) memutuskan untuk membuat suatu aplikasi dengan memanfaatkan algoritma Dijkstra untuk membantu pengunjung Kebun Raya Purwodadi dalam mencari lokasi tertentu.
 
@@ -36,7 +36,7 @@ Pada kasus ini, masing-masing persimpangan di Kebun Raya Purwodadi direpresentas
 
 \section{Studi Pustaka}
 \subsection{Algoritma Dijkstra}
-Algoritma Dijkstra adalah algoritma yang digunakan untuk menemukan jarak jalur terpendek antara dua  \textit{vertice} pada  \textit{graph} berbobot dan tidak berarah sederhana. Berbobot berarti graﬁk memiliki  \textit{edge} dengan suatu ’bobot’ atau harga. Bobot dapat merepresentasikan jarak, waktu, atau apapun yang memodelkan koneksi antara kedua  \textit{node}. Tidak berarah memiliki arti bahwa untuk setiap  \textit{node} yang terhubung, kita dapat mendekati suatu  \textit{node} dari kedua arah. Pendekatan Dijikstra juga memiliki asumsi bahwa bobot pada  \textit{edge} memiliki nilai yang tidak negatif. Hal ini karena nilai bobot akan terus dibandingkan dan diambil nilai yang paling kecil. Ada banyak varian pada algoritma ini, namun pada percobaan ini digunakan varian dimana suatu  \textit{node} ditetapkan menjadi  \textit{source node}. Dari  \textit{node} inilah akan dicari jarak terpendek diantara  \textit{node} lain. Algoritma ini dicetuskan oleh Edsger Wybe Dijkstra, salah seorang tokoh ternama di bidang  \textit{computer science}. Kompleksitas dari algoritma dijkstra adalah  \textit{O($n^2$)}, dengan \textit{n} menyatakan jumlah  \textit{vertice} dari  \textit{graph} yang bersangkutan.
+Algoritma Dijkstra adalah algoritma yang digunakan untuk menemukan jarak jalur terpendek antara dua  \textit{vertice} pada  \textit{graph} berbobot dan tidak berarah sederhana~\cite{Rosen2011}. Berbobot berarti graﬁk memiliki  \textit{edge} dengan suatu ’bobot’ atau harga. Bobot dapat merepresentasikan jarak, waktu, atau apapun yang memodelkan koneksi antara kedua  \textit{node}. Tidak berarah memiliki arti bahwa untuk setiap  \textit{node} yang terhubung, kita dapat mendekati suatu  \textit{node} dari kedua arah. Pendekatan Dijikstra juga memiliki asumsi bahwa bobot pada  \textit{edge} memiliki nilai yang tidak negatif. Hal ini karena nilai bobot akan terus dibandingkan dan diambil nilai yang paling kecil. Ada banyak varian pada algoritma ini, namun pada percobaan ini digunakan varian dimana suatu  \textit{node} ditetapkan menjadi  \textit{source node}. Dari  \textit{node} inilah akan dicari jarak terpendek diantara  \textit{node} lain. Algoritma ini dicetuskan oleh Edsger Wybe Dijkstra, salah seorang tokoh ternama di bidang  \textit{computer science}~\cite{dijkstra1959note}. Kompleksitas dari algoritma dijkstra adalah  \textit{O($n^2$)}, dengan \textit{n} menyatakan jumlah  \textit{vertice} dari  \textit{graph} yang bersangkutan.
 
 \subsection{Kebun Raya Purwodadi}
 Kebun Raya Purwodadi adalah kebun penelitian di Kecamatan Purwodadi, Jawa Timur. Ia juga dikenal dengan nama Hortus Ilkim Kering Purwodadi dan didirikan tanggal 30 Januari 1941 oleh Dr. L.G.M. Baas Becking. Sebagai cabang dari Kebun Raya Bogor, ia memiliki fungsi mengkoleksi tumbuhan yang hidup di dataran rendah kering. Sebagai Balai Konservasi Tumbuhan di bawah Pusat Konservasi Tumbuhan Kebun Raya, Kedeputian Bidang Ilmu Pengetahuan Hayati LIPI, kebun raya ini memiliki banyak tumbuhan yang dinaunginya. Dengan menggunakan algoritma Dijkstra, diharapkan ia dapat membantu pengunjung mencari tanaman tertentu maupun jarak yang paling optimal
@@ -69,5 +69,10 @@ Matriks penyimpanan yang digunakan pada program ini memiliki ukuran terbesar $n 
 
 \section{Kesimpulan}
 Pada perhitungan Jarak Terdekat dalam suatu lokasi atau ruang dapat diimplementasikan penggunaan Algoritma Djikstra dalam perhitungannya untuk mencapai suatu target pada ruang tersebut dari suatu titik. Terbukti dari penelitian Kebun Raya Purwodadi untuk menentukan Tanaman yang ingin dituju.
+
+\bibliographystyle{IEEEtran}
+\bibliography{referensi.bib}
+
+
 
 \end{document}
