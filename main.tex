@@ -1,5 +1,6 @@
 \documentclass[conference]{IEEEtran}
 \usepackage{cite}
+\usepackage{graphicx}
 
 
 %Judul
@@ -12,6 +13,9 @@
 Bandung, Indonesia\\
 Email: 18320017@std.stei.itb.ac.id}
 }
+
+%Folder Gambar
+\graphicspath{{./gambar/}}
 
 \begin{document}
 
@@ -64,8 +68,19 @@ Setelah data yang dibutuhkan dimasukkan, implementasi dari algoritma Dijkstra un
 \subsection{Perhitungan Kompleksitas Waktu}
 Kompleksitas dari program ini dengan notasi kompleksitas Big O adalah\textit{ O($n^2$)}. Hal tersebut disebabkan pada loop program bagian \textit{for}, terdapat loop \textit{for} lain yang berjumlah dua loop (Terletak pada bagian \textit{assign} kondisi awal dan ketika program menjalankan algoritma Djikstra). Karena hal tersebut, akibatnya adalah kompleksitas waktu akan naik seiring dengan naiknya \textit{n} program yang dijalankan, namun tidak bersifat linear sehingga kompleksitas waktunya adalah \textit{O($n^2$)}. Graﬁk kompleksitas waktu dapat direpresentasikan pada gambar 1.
 
+\begin{figure}[htbp]
+	\centering
+	\scalebox{0.22}{\input{gambar/Kompleksitas.pdf_tex}}
+	\caption{Kompleksitas Waktu}
+\end{figure} 
+
 \subsection{Perhitungan Kompleksitas Tempat}
-Matriks penyimpanan yang digunakan pada program ini memiliki ukuran terbesar $n \times n$, dengan nilai \textit{n} merepresentasikan banyak tanaman dalam ﬁle \textit{listtanaman.txt}. Program akan melalui graﬁk dan menyimpan nilai bobot antara node sebesar matriks di atas, mengakibatkan program dengan kompleksitas \textit{O($n^2$)}. Hal ini dapat dilihat pada graﬁk kompleksitas tempat di gambar 2
+Matriks penyimpanan yang digunakan pada program ini memiliki ukuran terbesar $n \times n$, dengan nilai \textit{n} merepresentasikan banyak tanaman dalam ﬁle \textit{listtanaman.txt}. Program akan melalui graﬁk dan menyimpan nilai bobot antara node sebesar matriks di atas, mengakibatkan program dengan kompleksitas \textit{O($n^2$)}. Hal ini dapat dilihat pada graﬁk kompleksitas tempat di gambar 2.
+\begin{figure}[htbp]
+	\centering
+	\scalebox{0.22}{\input{gambar/Kompleksitas.pdf_tex}}
+	\caption{Kompleksitas Tempat}
+\end{figure}
 
 \section{Kesimpulan}
 Pada perhitungan Jarak Terdekat dalam suatu lokasi atau ruang dapat diimplementasikan penggunaan Algoritma Djikstra dalam perhitungannya untuk mencapai suatu target pada ruang tersebut dari suatu titik. Terbukti dari penelitian Kebun Raya Purwodadi untuk menentukan Tanaman yang ingin dituju.
